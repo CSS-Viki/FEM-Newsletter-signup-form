@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <div class="information">
+          <h1>Stay updated!</h1>
+          <p class="tagline">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <div class="update-info">
+            <div class="flex-items">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Product discovery and building what matters</p>
+            </div>
+
+            <div class="flex-items">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+
+            <div class="flex-items">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>And much more!</p>
+            </div>
+          </div>
+
+          <div class="email">
+            <div class="flex-items">
+              <label for="email">Email address</label>
+              <span class="error-message"></span>
+            </div>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+              required
+            />
+            <button type="button" id="btn">
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="content">
+        <div class="content-image">
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt="illustration sign-up desktop"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CONTAINER -->
+    <div class="modal-container"></div>
+  </body>
+</html>
