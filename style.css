@@ -147,7 +147,7 @@ form {
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
 }
-@media (max-width: 21.5625em) {
+@media (max-width: 37.5em) {
   .container {
     flex-direction: column-reverse;
     padding: 0;
