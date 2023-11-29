@@ -13,7 +13,6 @@ function errorHandling() {
 }
 
 setTimeout(() => {
-  error.remove();
   email.style.color = "#000";
   email.style.borderColor = "hsl(231, 7%, 60%)";
   email.style.backgroundColor = "transparent";
@@ -26,6 +25,7 @@ function openModal() {
   if (email.value === "" || !email.value.match(validRegex)) {
     errorHandling();
   } else {
+    error.remove();
     container.style.display = "none";
 
     const modalDiv = document.createElement("div");
@@ -51,11 +51,12 @@ function openModal() {
       modalContainer.classList.remove("open-popup");
       container.style.display = "flex";
       email.value = "";
+      // error.remove();
     });
   }
 }
 
 btn.addEventListener("click", (e) => {
-  e.preventDefault();
   openModal();
+  e.preventDefault();
 });

@@ -2,6 +2,7 @@
 
 :root {
   --tomato: hsl(4, 100%, 67%);
+  --tomato-dark: hsl(343, 94%, 63%);
   --Dark-Slate-Grey: hsl(234, 29%, 20%);
   --charcoal-Grey: hsl(235, 18%, 26%);
   --Grey: hsl(231, 7%, 60%);
@@ -39,8 +40,9 @@ body {
   background-color: var(--White);
   display: flex;
   gap: 30px;
-  max-width: 660px;
-  padding: 20px;
+  max-width: 744px;
+  padding: 30px;
+  align-items: center;
   border-radius: 24px;
 }
 form {
@@ -49,10 +51,12 @@ form {
   justify-content: center;
 }
 .information {
-  padding: 30px;
+  padding: 15px;
 }
 .information h1 {
   margin-bottom: 15px;
+  font-size: 3rem;
+  color: var(--Dark-Slate-Grey);
 }
 .information .tagline {
   margin-bottom: 15px;
@@ -69,7 +73,9 @@ form {
   align-items: center;
   gap: 10px;
 }
-
+.flex-items > p {
+  white-space: nowrap;
+}
 .email .flex-items {
   justify-content: space-between;
 }
@@ -100,13 +106,16 @@ form {
   text-align: center;
   background-color: var(--Dark-Slate-Grey);
   color: var(--White);
+  font-weight: var(--font-weight-bold);
   border-radius: 8px;
-  transition: background-color 0.3s ease-in;
+  transition: all 0.3s ease-in;
   cursor: pointer;
 }
 .email button:hover,
 .popup button:hover {
-  background-color: var(--tomato);
+  background: linear-gradient(to right, var(--tomato-dark), var(--tomato));
+  box-shadow: 0px 5px 20px -4px var(--tomato);
+  /* background-color: var(--tomato); */
 }
 .content {
   display: flex;
@@ -153,12 +162,11 @@ form {
     padding: 0;
     border-radius: 0;
   }
-  .information {
-    margin-block: 35px 0;
-  }
-
   .content-image img {
     width: 100vw;
+  }
+  .information {
+    padding: 20px;
   }
   .update-info {
     margin-block: 0 50px;
